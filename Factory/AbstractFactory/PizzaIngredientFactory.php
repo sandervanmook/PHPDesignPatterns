@@ -10,7 +10,7 @@ interface PizzaIngredientFactory
 
     public function createCheese(): Cheese;
 
-    public function createVeggies();
+    public function createVeggies(): array;
 
     public function createPepperoni(): Pepperoni;
 

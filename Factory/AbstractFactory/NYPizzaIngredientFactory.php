@@ -6,22 +6,22 @@ class NYPizzaIngredientFactory implements PizzaIngredientFactory
 {
     public function createDough(): Dough
     {
-        // TODO: Implement createDough() method.
+        return new ThinCrustDough();
     }
 
     public function createSauce(): Sauce
     {
-        // TODO: Implement createSauce() method.
+        return new MarinaraSauce();
     }
 
     public function createCheese(): Cheese
     {
-        // TODO: Implement createCheese() method.
+        return new ReggianoCheese();
     }
 
     public function createVeggies()
     {
-        // TODO: Implement createVeggies() method.
+        return [];
     }
 
     public function createPepperoni(): Pepperoni
