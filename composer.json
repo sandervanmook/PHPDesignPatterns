@@ -1,0 +1,25 @@
+{
+    "name": "sandervanmook/phpdesignpatterns",
+    "description": "Information about design patterns in PHP",
+    "require-dev": {
+    },
+    "authors": [
+        {
+            "name": "Sander van Mook",
+            "email": "sandervanmook84@gmail.com"
+        }
+    ],
+    "require": {
+        "friendsofphp/php-cs-fixer": "^2.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Code\\": ""
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.1"
+        }
+    }
+}
