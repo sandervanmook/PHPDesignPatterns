@@ -1,17 +1,16 @@
 <?php
 
-
 namespace Code\Factory\AbstractFactory;
 
 class NYStylePizzaStore extends PizzaStore
 {
     // Protected so the client can't bypass orderPizza
-    protected function createPizza(string $type) : Pizza
+    protected function createPizza(string $type): Pizza
     {
-        if ($type == 'cheese') {
+        if ('cheese' == $type) {
             return new NYStyleCheesePizza();
         }
-        if ($type == 'veggie') {
+        if ('veggie' == $type) {
             return new NYStyleVeggiePizza();
         }
     }

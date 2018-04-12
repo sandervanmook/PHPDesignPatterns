@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Code\Strategy;
 
 abstract class Duck
@@ -10,7 +9,7 @@ abstract class Duck
 
     public function __construct(FlyBehavior $flyBehavior, QuackBehavior $quackBehavior)
     {
-        $this->flyBehavior = $flyBehavior;
+        $this->flyBehavior   = $flyBehavior;
         $this->quackBehavior = $quackBehavior;
     }
 

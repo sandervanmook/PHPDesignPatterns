@@ -1,59 +1,55 @@
 <?php
 
-
 namespace Code\Decorator;
 
 abstract class Beverage
 {
-    const SMALL = 'small';
+    const SMALL  = 'small';
     const MEDIUM = 'medium';
-    const LARGE = 'large';
+    const LARGE  = 'large';
 
     protected $description = '“Unknown Beverage';
-    protected $size = self::MEDIUM;
+    protected $size        = self::MEDIUM;
 
-    public function getDescription() : string
+    public function getDescription(): string
     {
         return $this->description;
     }
 
-    abstract public function cost() : float;
+    abstract public function cost(): float;
 
-    /**
-     * @throws \Exception
-     */
-    public function setSize(string $size) : void
+    public function setSize(string $size): void
     {
         $sizes = [
             self::SMALL,
             self::MEDIUM,
             self::LARGE,
         ];
-        // Insert custom exception here.
-        if (!in_array($size, $sizes)) {
-            throw new \Exception('Size not supported');
+
+        if (! in_array($size, $sizes)) {
+            throw new \RuntimeException('Size not supported');
         }
 
         $this->size = $size;
     }
 
-    public function getSize() :string
+    public function getSize(): string
     {
         return $this->size;
     }
 
-    public function isSmallSize() : bool
+    public function isSmallSize(): bool
     {
-        return $this->size == self::SMALL ? true : false;
+        return self::SMALL == $this->size ? true : false;
     }
 
-    public function isMediumSize() : bool
+    public function isMediumSize(): bool
     {
-        return $this->size == self::MEDIUM ? true : false;
+        return self::MEDIUM == $this->size ? true : false;
     }
 
-    public function isLargeSize() : bool
+    public function isLargeSize(): bool
     {
-        return $this->size == self::LARGE ? true : false;
+        return self::LARGE == $this->size ? true : false;
     }
 }

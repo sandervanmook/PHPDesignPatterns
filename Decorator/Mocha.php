@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Code\Decorator;
 
 class Mocha extends CondimentDecorator

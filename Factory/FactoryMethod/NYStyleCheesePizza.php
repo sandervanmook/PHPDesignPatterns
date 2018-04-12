@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Code\Factory\FactoryMethod;
 
 class NYStyleCheesePizza extends Pizza

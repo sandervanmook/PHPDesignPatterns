@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Code\Observer;
 
 class WeatherData implements Subject
@@ -29,7 +28,7 @@ class WeatherData implements Subject
 
     public function removeObserver(Observer $observer)
     {
-        if (!empty($this->observers)) {
+        if (! empty($this->observers)) {
             foreach ($this->observers as $k => $v) {
                 if ($observer == $v) {
                     unset($this->observers[$k]);
@@ -40,7 +39,7 @@ class WeatherData implements Subject
 
     public function notifyObservers()
     {
-        if (!empty($this->observers)) {
+        if (! empty($this->observers)) {
             foreach ($this->observers as $observer) {
                 $observer->update($this->temperature, $this->humidity, $this->pressure);
             }
@@ -49,6 +48,7 @@ class WeatherData implements Subject
 
     /**
      * Method to set fake input data, this would normally come from somewhere else.
+     *
      * @param float $temperature
      * @param float $humidity
      * @param float $pressure

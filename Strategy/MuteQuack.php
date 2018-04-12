@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Code\Strategy;
 
 class MuteQuack implements QuackBehavior

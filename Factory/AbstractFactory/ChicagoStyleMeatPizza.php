@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Code\Factory\AbstractFactory;
 
 class ChicagoStyleMeatPizza extends Pizza

@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Code\Observer;
 
 class ForecastDisplay implements Observer, DisplayElement
@@ -29,7 +28,7 @@ class ForecastDisplay implements Observer, DisplayElement
 
     public function update(float $temperature, float $humidity, float $pressure)
     {
-        $this->lastPressure = $this->currentPressure;
+        $this->lastPressure    = $this->currentPressure;
         $this->currentPressure = $pressure;
         $this->display();
     }

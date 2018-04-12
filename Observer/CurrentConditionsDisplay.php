@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Code\Observer;
 
 class CurrentConditionsDisplay implements Observer, DisplayElement
@@ -23,7 +22,7 @@ class CurrentConditionsDisplay implements Observer, DisplayElement
     public function update(float $temperature, float $humidity, float $pressure)
     {
         $this->temperature = $temperature;
-        $this->humidity = $humidity;
+        $this->humidity    = $humidity;
         $this->display();
     }
 }

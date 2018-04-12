@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Code\Decorator;
 
 class Whip extends CondimentDecorator

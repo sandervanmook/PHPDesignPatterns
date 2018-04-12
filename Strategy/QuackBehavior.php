@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Code\Strategy;
 
 interface QuackBehavior

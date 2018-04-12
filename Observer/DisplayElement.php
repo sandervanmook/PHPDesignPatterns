@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Code\Observer;
 
 interface DisplayElement

@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 namespace Code\Factory\SimpleFactory;
 
 class VeggiePizza implements Pizza
