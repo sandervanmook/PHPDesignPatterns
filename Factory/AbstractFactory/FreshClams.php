@@ -2,6 +2,6 @@
 
 namespace Code\Factory\AbstractFactory;
 
-class FreshClams
+class FreshClams implements Clam
 {
 }

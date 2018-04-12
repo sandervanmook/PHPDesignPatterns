@@ -2,6 +2,6 @@
 
 namespace Code\Factory\AbstractFactory;
 
-class ReggianoCheese
+class ReggianoCheese implements Cheese
 {
 }

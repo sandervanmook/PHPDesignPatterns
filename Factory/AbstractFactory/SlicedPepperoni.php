@@ -2,6 +2,6 @@
 
 namespace Code\Factory\AbstractFactory;
 
-class SlicedPepperoni
+class SlicedPepperoni implements Pepperoni
 {
 }

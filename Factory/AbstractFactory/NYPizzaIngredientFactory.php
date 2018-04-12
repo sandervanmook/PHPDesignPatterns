@@ -19,18 +19,18 @@ class NYPizzaIngredientFactory implements PizzaIngredientFactory
         return new ReggianoCheese();
     }
 
-    public function createVeggies()
+    public function createVeggies() : array
     {
         return [];
     }
 
     public function createPepperoni(): Pepperoni
     {
-        // TODO: Implement createPepperoni() method.
+        return new SlicedPepperoni();
     }
 
     public function createClam(): Clam
     {
-        // TODO: Implement createClam() method.
+        return new FreshClams();
     }
 }

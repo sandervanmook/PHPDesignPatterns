@@ -2,6 +2,6 @@
 
 namespace Code\Factory\AbstractFactory;
 
-class MarinaraSauce
+class MarinaraSauce implements Sauce
 {
 }
