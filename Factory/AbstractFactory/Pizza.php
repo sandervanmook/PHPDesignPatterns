@@ -1,18 +1,35 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Code\Factory\AbstractFactory;
 
 abstract class Pizza
 {
-    protected $name     = '';
-    protected $dough    = '';
-    protected $sauce    = '';
-    protected $toppings = [];
+    protected $name = 'Unknown';
+    protected $dough;
+    protected $sauce;
+    protected $veggies;
+    protected $cheese;
+    protected $pepperoni;
+    protected $clam;
 
-    public function prepare(): void
+    public function __toString(): string
     {
-        echo 'Preparing ' . $this->name . PHP_EOL;
+        return $this->name;
     }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): void
+    {
+        $this->name = $name;
+    }
+
+    abstract public function prepare();
 
     public function bake(): void
     {
@@ -27,5 +44,19 @@ abstract class Pizza
     public function box(): void
     {
         echo 'Place pizza in official PizzaStore box' . PHP_EOL;
+    }
+
+    // Just to show whats on the pizza in the Client.
+    public function includes()
+    {
+        echo 'I include :' . PHP_EOL;
+        echo $this->cheese . PHP_EOL;
+        echo $this->sauce . PHP_EOL;
+        echo $this->dough . PHP_EOL;
+        echo $this->pepperoni . PHP_EOL;
+        echo $this->clam . PHP_EOL;
+        foreach ($this->veggies as $veggy) {
+            echo $veggy . PHP_EOL;
+        }
     }
 }

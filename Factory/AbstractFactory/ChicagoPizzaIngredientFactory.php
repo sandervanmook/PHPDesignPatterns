@@ -4,26 +4,26 @@ declare(strict_types=1);
 
 namespace Code\Factory\AbstractFactory;
 
-class NYPizzaIngredientFactory implements PizzaIngredientFactory
+class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory
 {
     public function createDough(): Dough
     {
-        return new ThinCrustDough();
+        return new ThickCrustDough();
     }
 
     public function createSauce(): Sauce
     {
-        return new MarinaraSauce();
+        return new PlumTomatoSauce();
     }
 
     public function createCheese(): Cheese
     {
-        return new ReggianoCheese();
+        return new MozzarellaCheese();
     }
 
     public function createVeggies(): array
     {
-        return [new Garlic(), new Onion(), new Mushroom(), new RedPepper()];
+        return [new BlackOlives(), new Spinach(), new EggPlant()];
     }
 
     public function createPepperoni(): Pepperoni
@@ -33,6 +33,6 @@ class NYPizzaIngredientFactory implements PizzaIngredientFactory
 
     public function createClam(): Clam
     {
-        return new FreshClams();
+        return new FrozenClams();
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Strategy;
 
 require_once __DIR__ . '/../vendor/autoload.php';

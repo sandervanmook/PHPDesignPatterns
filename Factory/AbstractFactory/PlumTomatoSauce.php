@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Code\Factory\AbstractFactory;
 
-class SlicedPepperoni implements Pepperoni
+class PlumTomatoSauce implements Sauce
 {
     public function __toString()
     {
-        return 'SlicedPepperoni';
+        return 'PlumTomatoSauce';
     }
 }

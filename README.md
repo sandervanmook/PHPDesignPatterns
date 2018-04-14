@@ -1,6 +1,8 @@
 # PHPDesignPatterns
 Examples of different design patterns written in PHP.
 
+(this is a work in progress)
+
 The code is meant to explain the pattern, not to be the best solution to the "problem".
 In every sub folder is a Client.php, you can execute this on the CLI to see the code in action.
 

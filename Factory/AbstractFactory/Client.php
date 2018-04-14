@@ -1,11 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Code\Factory\AbstractFactory;
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-$nyStore      = new NYStylePizzaStore();
+$nyStore      = new NYPizzaStore();
 $chicagoStore = new ChicagoPizzaStore();
 
-$nycheese    = $nyStore->orderPizza('cheese');
-$chicagoMeat = $chicagoStore->orderPizza('meat');
+$nyCheese    = $nyStore->orderPizza('cheese');
+$nyCheese->includes();
+$nyClam = $nyStore->orderPizza('clam');
+$nyClam->includes();
+
+$chicagoClam = $chicagoStore->orderPizza('clam');
+$chicagoClam->includes();
+$chicagoCheese = $chicagoStore->orderPizza('cheese');
+$chicagoCheese->includes();
