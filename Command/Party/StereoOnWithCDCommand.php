@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Code\Command\RemoteWL;
+namespace Code\Command\Party;
 
-class StereoOnWIthCDCommand implements Command
+class StereoOnWithCDCommand implements Command
 {
     private $stereo;
 
@@ -18,5 +18,10 @@ class StereoOnWIthCDCommand implements Command
         $this->stereo->on();
         $this->stereo->setCD();
         $this->stereo->setVolume(11);
+    }
+
+    public function undo(): void
+    {
+        $this->stereo->off();
     }
 }

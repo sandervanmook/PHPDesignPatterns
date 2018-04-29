@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Code\Command\RemoteWL;
+namespace Code\Command\Party;
 
 class CeilingFanOffCommand implements Command
 {

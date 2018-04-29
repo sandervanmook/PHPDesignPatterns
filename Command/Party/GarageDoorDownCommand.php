@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Code\Command\RemoteWL;
+namespace Code\Command\Party;
 
-class GarageDoorUpCommand implements Command
+class GarageDoorDownCommand implements Command
 {
     private $garageDoor;
 
@@ -15,11 +15,11 @@ class GarageDoorUpCommand implements Command
 
     public function execute(): void
     {
-        $this->garageDoor->up();
+        $this->garageDoor->down();
     }
 
     public function undo(): void
     {
-        $this->garageDoor->down();
+        $this->garageDoor->up();
     }
 }

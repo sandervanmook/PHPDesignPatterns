@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Code\Command\RemoteWL;
+namespace Code\Command\Party;
 
-class LightOffCommand implements Command
+class LightOnCommand implements Command
 {
     private $light;
 
@@ -15,11 +15,11 @@ class LightOffCommand implements Command
 
     public function execute(): void
     {
-        $this->light->off();
+        $this->light->on();
     }
 
     public function undo(): void
     {
-        $this->light->on();
+        $this->light->off();
     }
 }

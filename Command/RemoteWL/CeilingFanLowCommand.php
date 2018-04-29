@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Code\Command\RemoteWL;
 
-class CeilingFanOffCommand implements Command
+class CeilingFanLowCommand implements Command
 {
     private $ceilingFan;
     private $prevSpeed;
@@ -17,7 +17,7 @@ class CeilingFanOffCommand implements Command
     public function execute(): void
     {
         $this->prevSpeed = $this->ceilingFan->getSpeed();
-        $this->ceilingFan->off();
+        $this->ceilingFan->low();
     }
 
     public function undo(): void
