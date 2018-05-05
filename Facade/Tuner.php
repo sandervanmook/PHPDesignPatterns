@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-
 namespace Code\Facade;
-
 
 class Tuner
 {
@@ -15,7 +13,7 @@ class Tuner
     public function __construct(string $description, Amplifier $amplifier)
     {
         $this->description = $description;
-        $this->amplifier = $amplifier;
+        $this->amplifier   = $amplifier;
     }
 
     public function __toString(): string
@@ -48,5 +46,4 @@ class Tuner
     {
         echo $this->description . ' setting FM mode' . PHP_EOL;
     }
-
 }
