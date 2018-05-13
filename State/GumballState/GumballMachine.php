@@ -10,6 +10,7 @@ class GumballMachine
     private $noQuarterState;
     private $hasQuarterState;
     private $soldState;
+    private $winnerState;
 
     private $state;
     private $count = 0;
@@ -20,6 +21,7 @@ class GumballMachine
         $this->noQuarterState  = new NoQuarterState($this);
         $this->hasQuarterState = new HasQuarterState($this);
         $this->soldState       = new SoldState($this);
+        $this->winnerState     = new WinnerState($this);
 
         $this->count = $numberGumballs;
         if ($numberGumballs > 0) {
@@ -105,5 +107,10 @@ class GumballMachine
     public function getState(): State
     {
         return $this->state;
+    }
+
+    public function getWinnerState(): State
+    {
+        return $this->winnerState;
     }
 }
