@@ -16,6 +16,9 @@ In every sub folder is a Client.php, you can execute this on the CLI to see the 
 ### Factory
 * Symfony's Form creation system (https://symfony.com/doc/current/forms.html#creating-form-classes)
 
+### State
+* The Winzou's Symfony Statemachine Bundle utilizes the State pattern: https://github.com/winzou/StateMachineBundle
+
 ## Sources
 The examples described here are based on the book "Head First Design Patterns" by Eric and Elisabeth Freeman.
 
