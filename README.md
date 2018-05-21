@@ -18,6 +18,13 @@ In every sub folder is a Client.php, you can execute this on the CLI to see the 
 
 ### State
 * The Winzou's Symfony Statemachine Bundle utilizes the State pattern: https://github.com/winzou/StateMachineBundle
+* The Workflow component of Symfony can be used as a Statemachine: https://symfony.com/doc/current/workflow/state-machines.html
+
+### Iterator
+PHP has a standard interface you can use for creating a Iterator : http://php.net/manual/en/class.iterator.php
+Also there are a lot of predefined Iterators in PHP : http://php.net/manual/en/spl.iterators.php
+Keep in mind that PHP uses arrays in a different way than Java does. In PHP arrays are less strict and more flexible.
+More about data structures in PHP: http://php.net/manual/en/spl.datastructures.php
 
 ## Sources
 The examples described here are based on the book "Head First Design Patterns" by Eric and Elisabeth Freeman.

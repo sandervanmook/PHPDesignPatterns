@@ -10,7 +10,8 @@
         }
     ],
     "require": {
-        "friendsofphp/php-cs-fixer": "^2.11"
+        "friendsofphp/php-cs-fixer": "^2.11",
+        "doctrine/collections": "^1.5"
     },
     "autoload": {
         "psr-4": {
