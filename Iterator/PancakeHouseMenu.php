@@ -57,7 +57,7 @@ class PancakeHouseMenu implements Menu
 
     public function createIterator(): \ArrayIterator
     {
-        return new \ArrayIterator($this->menuItems->toArray());
+        return $this->menuItems->getIterator();
     }
 
     // Other menu methods here
