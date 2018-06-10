@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-
 namespace Code\Composite;
-
 
 class CompositeIterator implements \Iterator
 {
@@ -24,15 +22,14 @@ class CompositeIterator implements \Iterator
     public function next(): ?MenuComponent
     {
         if ($this->valid()) {
-            $iterator = $this->stack->bottom();
+            $iterator  = $this->stack->bottom();
             $component = $iterator->next();
             $this->stack->push($component->createIterator());
 
             return $component;
-        } else {
-
-            return null;
         }
+
+        return null;
     }
 
     public function key()
@@ -42,7 +39,6 @@ class CompositeIterator implements \Iterator
     public function valid(): bool
     {
         if ($this->stack->isEmpty()) {
-
             return false;
         }
         $iterator = $this->stack->bottom();
@@ -50,14 +46,12 @@ class CompositeIterator implements \Iterator
             $this->stack->pop();
 
             return $this->valid();
-        } else{
-
-            return true;
         }
+
+        return true;
     }
 
     public function rewind()
     {
     }
-
 }

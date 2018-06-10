@@ -13,8 +13,8 @@ class Menu extends MenuComponent
 
     public function __construct(string $name, string $description)
     {
-        $this->name        = $name;
-        $this->description = $description;
+        $this->name           = $name;
+        $this->description    = $description;
         $this->menuComponents = [];
     }
 
@@ -50,8 +50,7 @@ class Menu extends MenuComponent
     public function createIterator()
     {
         if (null === $this->iterator) {
-            $this->iterator = new CompositeIterator(new \ArrayIterator
-            ($this->menuComponents));
+            $this->iterator = new CompositeIterator(new \ArrayIterator($this->menuComponents));
         }
 
         return $this->iterator;
@@ -69,7 +68,5 @@ class Menu extends MenuComponent
 //            MenuComponent menuComponent = iterator.next();
 //			menuComponent.print();
 //		}
-
     }
-
 }
